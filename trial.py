@@ -4,3 +4,5 @@ list1=["baba","banana","cow"]
 print(list1)
 print(list1)
 1-2
+def func2():
+    print("test github push")
