@@ -1,0 +1,102 @@
+Qn6: FUNCTION WITHIN A FUNCTION; registration accesses info within profile
+
+
+# function inside another function, essentially the inner function defined inside the outer function, 
+is a nested function or inner function.
+
+#Inner functions can have their own parameters, like z in... 
+  def inner(z):  
+#We can use z as we would a parameter of any function, e.g. to output the value here in...
+      print("z:", z)
+
+# However the inner function only has the scope of the outer function, that is to say, it only exists 
+in the boundaries of the outer function primarily. If one tries to call the inner function outside the 
+outer function, it will bring back a name error due to this reason.
+
+ #This essentially references local and global scopes in python. 
+ 
+ # functions are considered first class objects in python meaning that we can return a function from 
+ another function.
+ #This means here that we treat the inner function which is being returned as a value and add... 
+     return inner 
+ to the outer function before storing it as a variable outside the function like this...    
+     variable= outer()
+ #Then we call variable as we would a function in order to return the inner function like this...
+     variable()   
+ #That way function would have returned or called another function. Note that this is also a way of 
+ expressing a function within a function outside the function, which is generally impossible in python.
+ #It's in other words an exception to the general rule.     
+    
+ # We can access any variable in the enclosing scope that is created before the inner function is called. 
+ For example we can access "a" which was created just before calling the inner function like...
+     print("a:", a)
+
+    # We cannot however access "a" when it is created AFTER the inner function is called...
+     inner()
+    print("b:", b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    # We can create local variables of the function inner(), but they will not
+    # be accessible in the outer function.
+    c = 50
+
+  
+  # creates a local variable a of the outer() function
+  a = 1
+
+  # call the inner() function and pass it the value 2 as an argument
+  inner(2)
+  
+  # Notice how the variable y of the outer() function has been modified and set
+  # to 50 by the inner function...
+  print("y:", y)
+
+  # The inner() function cannot access this variable "b" because it is created 
+  # AFTER the inner() function is called. 
+  b = 2 
+
+  # The outer() function cannot access a local variable of the inner() 
+  # function "c", the below would cause an error...
+  #
+  # print("c:", c)
+
+
+# Call the outer() function
+outer(10)
