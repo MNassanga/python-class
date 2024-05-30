@@ -34,12 +34,3 @@ def  profile():
 
 data=profile()
 data()   
-
-
-def registration():
-    y= "ram", "12", "python usage"
-
-    def profile(): 
-        print("y:", y) 
-    return profile()
-registration()
