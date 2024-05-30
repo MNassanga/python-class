@@ -4,5 +4,11 @@ list1=["baba","banana","cow"]
 print(list1)
 print(list1)
 1-2
-def func2():
-    print("test github push")
+
+def registration():
+    y= "ram", "12", "python usage"
+
+    def profile(): 
+        print("y:", y) 
+    return profile()
+registration()

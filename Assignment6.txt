@@ -23,7 +23,7 @@ outer function, it will bring back a name error due to this reason.
      variable= outer()
  #Then we call variable as we would a function in order to return the inner function like this...
      variable()   
- #That way function would have returned or called another function. Note that this is also a way of 
+ #That way the function would have returned or called another function. Note that this is also a way of 
  expressing a function within a function outside the function, which is generally impossible in python.
  #It's in other words an exception to the general rule.     
     

@@ -22,7 +22,7 @@ def profile():
         print ("Jane", "12", "data science and python") 
 
     registration() 
-profile()      
+profile()     
         
 
 def  profile():
@@ -31,6 +31,15 @@ def  profile():
         print ("name","age","course") 
     return registration 
     
+
 data=profile()
 data()   
 
+
+def registration():
+    y= "ram", "12", "python usage"
+
+    def profile(): 
+        print("y:", y) 
+    return profile()
+registration()
