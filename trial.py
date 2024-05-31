@@ -7,8 +7,13 @@ print(list1)
 
 def registration():
     y= "ram", "12", "python usage"
-
-    def profile(): 
-        print("y:", y) 
+    return registration()
+def profile(x): 
+    print ("y:", y) 
     return profile()
-registration()
+
+def student(name):
+    return name
+def data(x):
+    return student(x)
+data("Jamie") 
